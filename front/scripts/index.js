@@ -1,4 +1,3 @@
-console.log(tempData);
 class Peliculas {
     constructor(title, year, director, duration, genre, rate, poster) {
         this.title = title
@@ -53,16 +52,22 @@ function toHtml(objeto) {
     return nuevoDiv
 }
 
-function movieToHtml() {
+
+/* CLASE 2HW */
+
+
+function movieToHtml(data) {
     const contenedorPeliculas = document.getElementById("divFinal");
+    contenedorPeliculas.innerHTML = '';
 
-    const peliculasHTML = tempData.map(pelicula => {
-        const { title, year, director, duration, genre, rate, poster } = pelicula;
+    data.forEach(movieData => {
+        const { title, year, director, duration, genre, rate, poster } = movieData;
         const peli = new Peliculas(title, year, director, duration, genre, rate, poster);
-        return toHtml(peli);
+        const movieHtml = toHtml(peli);
+        contenedorPeliculas.appendChild(movieHtml);
     });
-
-    contenedorPeliculas.append(...peliculasHTML);
 }
 
-movieToHtml();
+$.get("https://students-api.2.us-1.fl0.io/movies/", (data) => {
+    movieToHtml(data);
+});
