@@ -4,54 +4,47 @@
 }
 
 body {
-    background-image: url(/PM2-tomysykess/front/img/terror-background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(/PM2-tomysykess/front/img/backgroundF.jpg);
     background-position: center;
-    color: white;
-    text-align: center;
     justify-content: center;
-    padding: 20px 0px 0px 0px;
-    height: 90vh;
-    width: 97vw;
+
 }
 
 
-nav {
+
+
+
+.lanav {
     background-color: #000000;
-
-
     display: flex;
-    justify-content: space-between;
-    padding: 0.1em;
-    padding-right: 10%;
-    padding-left: 10%;
-
+    justify-content: center;
+    margin-bottom: 5em;
     opacity: 60%;
-    width: 80.6vw;
 }
 
-nav:hover {
+
+
+
+
+
+.lanav:hover {
     background-color: rgb(48, 0, 0);
 
 
-    display: flex;
-    justify-content: space-between;
-    padding: 0.4em;
-    padding-right: 10%;
-    padding-left: 10%;
 
-    width: 80.6vw;
+    display: flex;
+    justify-content: center;
+
+
     transition: 0.5s;
 }
 
-a {
+.elboton {
     border: solid rgb(0, 0, 0) 1px;
-    display: flexbox;
+    display: flex;
     color: #a07f7f;
     text-decoration: none;
     justify-content: center;
-    padding-top: 20px;
     text-align: center;
 
     height: 30px;
@@ -61,13 +54,13 @@ a {
 }
 
 
-a:hover {
+.elboton:hover {
     background-color: rgb(255, 0, 0);
     transition: 0.5s;
     opacity: 70%;
 }
 
-h1 {
+.elh1 {
     text-align: center;
     font-family: 'Heroking-Regular';
     font-size: 3.5em;
@@ -77,7 +70,7 @@ h1 {
 
 
 
-h1:hover {
+.elh1:hover {
     color: rgb(255, 0, 0);
     filter: drop-shadow(1px);
     transition: 2s;
@@ -101,21 +94,18 @@ h1:hover {
 
 
 
-.container {
-    position: fixed;
+.miContainer {
+
     top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
+
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-
 
     border-radius: 15px;
     margin-top: 20px;
     opacity: 80%;
-
 
     width: 95%;
     height: 70%;
@@ -148,12 +138,9 @@ h1:hover {
     align-items: center;
     background-color: #0000004f;
     border-radius: 20px;
-    padding: 1px;
-    margin: 10px;
-    height: 435px;
-    animation: cartita 5s infinite;
+    padding: 1em;
+    margin: 1em;
     width: 360px;
-
 
 }
 
@@ -194,4 +181,3 @@ h1:hover {
     }
 
 }
-
