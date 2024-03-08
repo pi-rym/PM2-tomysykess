@@ -41,16 +41,35 @@ function toHtml(objeto) {
     const nuevoDiv = document.createElement("div");
     nuevoDiv.classList.add("nuevoDiv")
 
-    nuevoDiv.appendChild(htmlTitle);
-    nuevoDiv.appendChild(htmlYear);
-    nuevoDiv.appendChild(htmlDirector);
-    nuevoDiv.appendChild(htmlDuration);
-    nuevoDiv.appendChild(htmlGenre);
-    nuevoDiv.appendChild(htmlRate);
-    nuevoDiv.appendChild(htmlPoster);
+    nuevoDiv.appendChild(htmlTitle);/* --- */
+    nuevoDiv.appendChild(htmlYear);/* --- */
+    nuevoDiv.appendChild(htmlDirector);/* --- */
+    nuevoDiv.appendChild(htmlDuration);/* --- */
+    nuevoDiv.appendChild(htmlGenre);/* --- */
+    nuevoDiv.appendChild(htmlRate);/* --- */
+    nuevoDiv.appendChild(htmlPoster); /* --- */
 
+
+    /*     (
+            <div>
+                <div>
+                    <h3> `${}`</h3>
+                    <p> <b>`${}`</b> </p>
+                </div>
+    
+                <img >`${ }`</img>
+    
+    
+                <div>
+                    <p>`${}`</p>
+                    <p>`${}`</p>
+                    <p>`${}`</p>
+                </div>
+            </div>
+        ) */
     return nuevoDiv
 }
+
 
 
 /* CLASE 2HW */
@@ -71,3 +90,8 @@ function movieToHtml(data) {
 $.get("https://students-api.2.us-1.fl0.io/movies/", (data) => {
     movieToHtml(data);
 });
+
+
+
+
+
