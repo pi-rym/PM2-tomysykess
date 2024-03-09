@@ -156,6 +156,14 @@ body {
 
 }
 
+.accordion-item,
+.accordion-button,
+.accordion-body {
+    background-color: black;
+    color: white;
+}
+
+
 @keyframes movie {
 
     0% {
