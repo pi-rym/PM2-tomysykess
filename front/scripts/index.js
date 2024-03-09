@@ -13,68 +13,32 @@ class Peliculas {
 function toHtml(objeto) {
     const { title, year, director, duration, genre, rate, poster } = objeto
 
-
-    const htmlTitle = document.createElement('h3');
-    const htmlYear = document.createElement('h4');
-    const htmlDirector = document.createElement('h4');
-    const htmlDuration = document.createElement('h4');
-    const htmlGenre = document.createElement('h4');
-    const htmlRate = document.createElement('h4');
-    const htmlPoster = document.createElement('img');
-
-    htmlTitle.textContent = title
-    htmlYear.textContent = year
-    htmlDirector.textContent = director
-    htmlDuration.textContent = duration
-    htmlGenre.textContent = genre
-    htmlRate.textContent = rate
-    htmlPoster.src = poster
-
-    htmlTitle.classList.add("classH3");
-    htmlYear.classList.add("classH4");
-    htmlDirector.classList.add("classH4");
-    htmlDuration.classList.add("classH4");
-    htmlGenre.classList.add("classH4");
-    htmlRate.classList.add("classH4");
-    htmlPoster.classList.add("classPoster");
-
     const nuevoDiv = document.createElement("div");
     nuevoDiv.classList.add("nuevoDiv")
 
-    nuevoDiv.appendChild(htmlTitle);/* --- */
-    nuevoDiv.appendChild(htmlYear);/* --- */
-    nuevoDiv.appendChild(htmlDirector);/* --- */
-    nuevoDiv.appendChild(htmlDuration);/* --- */
-    nuevoDiv.appendChild(htmlGenre);/* --- */
-    nuevoDiv.appendChild(htmlRate);/* --- */
-    nuevoDiv.appendChild(htmlPoster); /* --- */
+    nuevoDiv.innerHTML =
+        `<div >
+    <h3 class="classH3">${title}</h3>
+        <h4 class="classH4">${year}</h4>
+        <img class="classPoster" src="${poster}" alt="">
+        <div class="izq">
+           <div>
+              <h4 class="classH4">${director}</h4>
+              <h4 class="classH4">${duration}</h4>
+           </div>   
+        </div>   
+        <div class="der">
+           <div>
+           <h4 class="classH4">★${rate}</h4>
+           <h4 class="classH4">${genre}</h4>
+           </div>   
+           </div> 
+           </div>  
+           `
 
-
-    /*     (
-            <div>
-                <div>
-                    <h3> `${}`</h3>
-                    <p> <b>`${}`</b> </p>
-                </div>
-    
-                <img >`${ }`</img>
-    
-    
-                <div>
-                    <p>`${}`</p>
-                    <p>`${}`</p>
-                    <p>`${}`</p>
-                </div>
-            </div>
-        ) */
     return nuevoDiv
 }
-
-
-
 /* CLASE 2HW */
-
-
 function movieToHtml(data) {
     const contenedorPeliculas = document.getElementById("divFinal");
     contenedorPeliculas.innerHTML = '';
@@ -90,8 +54,3 @@ function movieToHtml(data) {
 $.get("https://students-api.2.us-1.fl0.io/movies/", (data) => {
     movieToHtml(data);
 });
-
-
-
-
-

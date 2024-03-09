@@ -50,7 +50,7 @@ body {
     height: 30px;
     width: 300px;
     background-color: #000000;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 
@@ -118,30 +118,32 @@ body {
 }
 
 .classH4 {
+    color: white;
     font-size: 0.8em;
 }
 
 .classPoster {
-
+    display: flex;
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
     height: 80%;
-    width: 80%;
+    /* Ajustar altura */
+    width: 100%;
+    /* Ajustar anchura */
     border-radius: 15px;
 }
 
-
-
-
 .nuevoDiv {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: #0000004f;
     border-radius: 20px;
-    padding: 1em;
-    margin: 1em;
+    padding: 2em;
+    margin: auto;
     width: 360px;
-
 }
 
 .nuevoDiv:hover {
