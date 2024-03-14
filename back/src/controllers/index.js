@@ -5,7 +5,7 @@
 y responder al cliente con la informacion obtenida */
 
 const testConstroller = (req, res) => {
-  res.status(200).send("Hola, tu naríz contra mis bolas");
+  res.status(200).send("Hola");
 };
 
 module.exports = testConstroller;

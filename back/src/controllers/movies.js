@@ -1,7 +1,7 @@
+const objetoMovies = require("../services/moduleMovies");
+
 const moviesConstroller = (req, res) => {
-  res
-    .status(200)
-    .send("Próximamente estarán disponibles los datos de películas");
+  res.status(200).json(objetoMovies.returnArrayMovies());
 };
 
 module.exports = moviesConstroller;

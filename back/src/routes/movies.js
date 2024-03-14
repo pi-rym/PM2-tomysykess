@@ -2,6 +2,6 @@ const { Router } = require("express");
 const direcMovies = require("../controllers/movies");
 
 const movies = Router();
-movies.get("/movies", direcMovies);
+movies.get("/", direcMovies);
 
 module.exports = movies;
