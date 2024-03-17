@@ -2,13 +2,17 @@
   tengo que definir solicitudes a rutas como direcciones de tipo GET /users*/
 /* para que las importe controllers */
 const { Router } = require("express");
-const testController = require("../controllers/index");
-const moviesController = require("../controllers/movies");
+const indexController = require("../controllers/indexController");
+
+const moviesRouter = require("../routes/moviesRouter");
+
 const router = Router();
+
 router.get(
   "/",
-  testController
+  indexController
 ); /* ESTO ES DEFINIR EL ENDPOINT. ESTA CALLBACK ES UN CONTROLLER */
-router.use("/movies", moviesController);
+
+router.use("/movies", moviesRouter); /* ruta modularizada */
 
 module.exports = router;

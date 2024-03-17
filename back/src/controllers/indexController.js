@@ -4,8 +4,8 @@
 /* para esa ruta GET /users => vamos a ir a la base de datos a pedir la informacion de los usuarios 
 y responder al cliente con la informacion obtenida */
 
-const testConstroller = (req, res) => {
-  res.status(200).send("Hola");
+const indexConstroller = (req, res) => {
+  res.status(200).send("Hola, estamos en la ruta del index / ");
 };
 
-module.exports = testConstroller;
+module.exports = indexConstroller;

@@ -1,5 +1,5 @@
 const objetoMovies = {
-  returnArrayMovies: () => {
+  returnArrayMovies: async () => {
     return [
       {
         title: "Guardians of the Galaxy Vol. 2",

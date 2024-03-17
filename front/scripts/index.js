@@ -22,13 +22,13 @@ function movieToHtml(data) {
     contenedorPeliculas.appendChild(movieHtml);
   });
 }
-const axios = require("axios");
 
 /* 
 $.get("https://students-api.2.us-1.fl0.io/movies/", (data) => {
-    movieToHtml(data);
+  movieToHtml(data);
 }); */
 
+const axios = require("axios"); /* REQUERIR AXIOS!!!! */
 /* HW async/await */
 async function convertirPeliculasAHtml() {
   const contenedorPeliculas = document.getElementById("divFinal");
