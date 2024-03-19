@@ -1,8 +1,8 @@
-const objetoMovies = require("../services/moduleMovies");
+const getMovies = require("../services/moduleMovies");
 
 const moviesConstroller = async (req, res) => {
   try {
-    const movies = await objetoMovies.returnArrayMovies();
+    const movies = await getMovies();
     res.status(200).json(movies);
   } catch (error) {
     res.status(500).json({

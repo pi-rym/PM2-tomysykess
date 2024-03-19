@@ -1,4 +1,4 @@
-const objetoMovies = {
+/* const objetoMovies = {
   returnArrayMovies: async () => {
     return [
       {
@@ -33,6 +33,21 @@ const objetoMovies = {
       },
     ];
   },
+}; */
+/* 
+module.exports = objetoMovies;
+ */
+
+const Movie = require("../models/Movie");
+
+const getMovies = async () => {
+  try {
+    const moviesDB = await Movie.find();
+    console.log("Estamos dentro de moviesDB, try");
+    return moviesDB;
+  } catch (error) {
+    console.log("Estamos dentro de moviesDB, catch");
+  }
 };
 
-module.exports = objetoMovies;
+module.exports = getMovies;
