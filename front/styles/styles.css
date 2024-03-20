@@ -1,193 +1,182 @@
 @font-face {
-    font-family: 'Heroking-Regular';
-    src: url(/asset/fonts/Heroking-Regular.ttf);
+  font-family: "Heroking-Regular";
+  src: url(/asset/fonts/Heroking-Regular.ttf);
 }
 
 body {
-    background-image: url(/asset/img/backgroundF.jpg);
-    background-position: center;
-    justify-content: center;
-
+  background-image: url(/asset/img/backgroundF.jpg);
+  background-position: center;
+  justify-content: center;
 }
-
-
-
-
 
 .lanav {
-    background-color: #000000;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5em;
-    opacity: 60%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5em;
+  opacity: 60%;
 }
 
-
-
-
-
-
 .lanav:hover {
-    background-color: rgb(48, 0, 0);
+  background-color: rgb(48, 0, 0);
 
+  display: flex;
+  justify-content: center;
 
-
-    display: flex;
-    justify-content: center;
-
-
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 .elboton {
-    border: solid rgb(0, 0, 0) 1px;
-    display: flex;
-    color: #a07f7f;
-    text-decoration: none;
-    justify-content: center;
-    text-align: center;
+  border: solid rgb(0, 0, 0) 1px;
+  display: flex;
+  color: #a07f7f;
+  text-decoration: none;
+  justify-content: center;
+  text-align: center;
 
-    height: 30px;
-    width: 300px;
-    background-color: #000000;
-    border-radius: 5px;
+  height: 30px;
+  width: 300px;
+  background-color: #000000;
+  border-radius: 5px;
 }
 
-
 .elboton:hover {
-    background-color: rgb(255, 0, 0);
-    transition: 0.5s;
-    opacity: 70%;
+  background-color: rgb(255, 0, 0);
+  transition: 0.5s;
+  opacity: 70%;
 }
 
 .elh1 {
-    text-align: center;
-    font-family: 'Heroking-Regular';
-    font-size: 3.5em;
-    color: rgb(255, 255, 255);
-    opacity: 70%;
+  text-align: center;
+  font-family: "Heroking-Regular";
+  font-size: 3.5em;
+  color: rgb(255, 255, 255);
+  opacity: 70%;
 }
-
-
 
 .elh1:hover {
-    color: rgb(255, 0, 0);
-    filter: drop-shadow(1px);
-    transition: 2s;
+  color: rgb(255, 0, 0);
+  filter: drop-shadow(1px);
+  transition: 2s;
 }
-
 
 .banner {
-
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    opacity: 70%;
-    padding: 20px;
-    max-height: 3%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  opacity: 70%;
+  padding: 20px;
+  max-height: 3%;
 }
-
 
 .banner:hover {
-    background-color: rgb(48, 0, 0);
-    transition: 3s;
+  background-color: rgb(48, 0, 0);
+  transition: 3s;
 }
 
-
-
 .miContainer {
+  top: 25%;
 
-    top: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+  border-radius: 15px;
+  margin-top: 20px;
+  opacity: 80%;
 
-    border-radius: 15px;
-    margin-top: 20px;
-    opacity: 80%;
-
-    width: 95%;
-    height: 70%;
+  width: 95%;
+  height: 70%;
 }
 
 .classH3 {
-    font-size: 1.2em;
-    color: white;
-    margin-bottom: 5px;
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 5px;
 }
 
 .classH4 {
-    color: white;
-    font-size: 0.8em;
+  color: white;
+  font-size: 0.8em;
 }
 
 .classPoster {
-    display: flex;
-    justify-content: center;
-    /* Centrar horizontalmente */
-    align-items: center;
-    /* Centrar verticalmente */
-    height: 80%;
-    /* Ajustar altura */
-    width: 100%;
-    /* Ajustar anchura */
-    border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  /* Centrar horizontalmente */
+  align-items: center;
+  /* Centrar verticalmente */
+  height: 80%;
+  /* Ajustar altura */
+  width: 100%;
+  /* Ajustar anchura */
+  border-radius: 15px;
 }
 
 .nuevoDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0000004f;
-    border-radius: 20px;
-    padding: 2em;
-    margin: auto;
-    width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000004f;
+  border-radius: 20px;
+  padding: 2em;
+  margin: auto;
+  width: 360px;
 }
 
 .nuevoDiv:hover {
-    background-color: rgba(170, 0, 0, 0.466);
-    opacity: 90%;
-    font: color rgb(0, 0, 0);
-    color: black;
-    transition: 1s;
-    animation: movie 1s ease-in-out infinite;
-
+  background-color: rgba(170, 0, 0, 0.466);
+  opacity: 90%;
+  font: color rgb(0, 0, 0);
+  color: black;
+  transition: 1s;
+  animation: movie 1s ease-in-out infinite;
 }
 
 .accordion-item,
 .accordion-button,
 .accordion-body {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
-
 @keyframes movie {
+  0% {
+    transform: scale(1);
+  }
 
-    0% {
-        transform: scale(1);
-    }
+  25% {
+    transform: scale(1.05);
+  }
 
-    25% {
-        transform: scale(1.05);
-    }
+  32% {
+    transform: scale(1);
+  }
 
-    32% {
-        transform: scale(1);
-    }
+  50% {
+    transform: scale(1.05);
+  }
 
-    50% {
-        transform: scale(1.05);
-    }
+  75% {
+    transform: scale(1);
+  }
 
-    75% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
+}
 
-    100% {
-        transform: scale(1);
-    }
+.formMovies {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #323233;
+  padding: 5px 5px;
+  border: 2px solid rgb(34, 34, 34);
+  border-radius: 15px;
+  opacity: 90%;
+}
 
+p {
+  color: white;
 }

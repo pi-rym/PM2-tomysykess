@@ -15,4 +15,6 @@ router.get(
 
 router.use("/movies", moviesRouter); /* ruta modularizada */
 
+router.post("/movies", moviesRouter);
+
 module.exports = router;

@@ -1,13 +1,10 @@
-const Peliculas = require('./peliculasModule');
-
 function toHtml(objeto) {
-    const { title, year, director, duration, genre, rate, poster } = objeto
+  const { title, year, director, duration, genre, rate, poster } = objeto;
 
-    const nuevoDiv = document.createElement("div");
-    nuevoDiv.classList.add("nuevoDiv")
+  const nuevoDiv = document.createElement("div");
+  nuevoDiv.classList.add("nuevoDiv");
 
-    nuevoDiv.innerHTML =
-        `<div >
+  nuevoDiv.innerHTML = `<div >
     <h3 class="classH3">${title}</h3>
         <h4 class="classH4">${year}</h4>
         <img class="classPoster" src="${poster}" alt="">
@@ -24,9 +21,9 @@ function toHtml(objeto) {
            </div>   
            </div> 
            </div>  
-           `
+           `;
 
-    return nuevoDiv
+  return nuevoDiv;
 }
 
 module.exports = { toHtml };

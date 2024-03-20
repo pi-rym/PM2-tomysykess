@@ -19,7 +19,7 @@ function movieToHtml(data) {
       poster
     );
     const movieHtml = toHtml(peli);
-    contenedorPeliculas.appendChild(movieHtml);
+    contenedorPeliculas?.appendChild(movieHtml);
   });
 }
 
