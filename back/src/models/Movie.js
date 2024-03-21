@@ -32,8 +32,8 @@ const movieSchema = new Schema({
   },
 });
 
-const Movie = model("Movie", movieSchema);
+const Movie = model("Movie", movieSchema); // Crear el modelo a partir del esquema
 
-module.exports = Movie;
+module.exports = Movie; // Exportar el modelo
 /* revisar clase de hoy y documentacion de mongoose 
 validaciones de schemas*/

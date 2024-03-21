@@ -7,6 +7,56 @@ function validateForm({
   rate,
   poster,
 }) {
+  const errors = [];
+
+  /*  validar  title */
+  if (!title || typeof title !== "string" || title.trim() === "") {
+    errors.push("El Título es obligatorio.");
+  }
+
+  /* validar  year  */
+  if (!year || isNaN(year) || year.toString().length !== 4) {
+    errors.push("El Año es obligatorio y debe ser un número de 4 dígitos.");
+  }
+
+  /*  validar pdirector */
+  if (!director || typeof director !== "string" || director.trim() === "") {
+    errors.push("El Director es obligatorio.");
+  }
+
+  /* validar duration */
+  if (!duration || typeof duration !== "string" || duration.trim() === "") {
+    errors.push("La Duración es obligatoria.");
+  }
+
+  /* validar genre */
+  if (!genre || !Array.isArray(genre) || genre.length === 0) {
+    errors.push("El Género es obligatorio y debe ser un array no vacío.");
+  }
+
+  /*  validar rate */
+  if (!rate || typeof rate !== "string" || rate.trim() === "") {
+    errors.push("El Rate es obligatorio.");
+  }
+
+  /* validar  poster */
+  if (!poster || typeof poster !== "string" || poster.trim() === "") {
+    errors.push("El Poster es obligatorio.");
+  } else {
+    const isValidUrl = (value) => {
+      try {
+        const url = new URL(value);
+        return url.protocol === "http:" || url.protocol === "https:";
+      } catch {
+        return false;
+      }
+    };
+
+    if (!isValidUrl(poster)) {
+      errors.push("El póster debe ser una URL válida.");
+    }
+  }
+
   if (
     !title ||
     !year ||
@@ -16,7 +66,7 @@ function validateForm({
     !rate ||
     !poster
   )
-    return "Todos los campos son obligatorios";
+    return errors;
 }
 
 function eventcreateMovie(event) {
@@ -25,7 +75,7 @@ function eventcreateMovie(event) {
   const year = document.getElementById("year").value;
   const director = document.getElementById("director").value;
   const duration = document.getElementById("duration").value;
-  const genre = document.getElementById("genre").value.split(" ");
+  const genre = document.getElementById("genre").value.split(",");
   const rate = document.getElementById("rate").value;
   const poster = document.getElementById("poster").value;
 
@@ -54,7 +104,7 @@ function eventcreateMovie(event) {
     .post("http://localhost:3000/movies", newMovie)
     .then(() => alert("Pelicula creada!"));
   if (error) return alert(error);
-  return alert("Datos enviados");
+  else return alert("Datos enviados");
 }
 
 function clearInputs() {
